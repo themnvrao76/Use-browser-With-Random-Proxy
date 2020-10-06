@@ -1,0 +1,25 @@
+from selenium import webdriver
+import time
+# import os
+import random
+newlist=[]
+
+
+# # mylist=["169.57.1.84:80","159.8.114.37:80","162.159.244.149:80","104.18.54.1:80"]
+# x=time.time
+
+try: 
+	ans="138.197.157.32:3128"
+	PROXY = ans # IP:PORT or HOST:PORT
+	print(ans)
+	# 
+	# driver = webdriver.Chrome(executable_path=r'C:\Users\manav\OneDrive\Desktop\chromedriver.exe')
+	chrome_options = webdriver.ChromeOptions()
+	chrome_options.add_argument(f"--proxy-server={PROXY}")
+
+	chrome = webdriver.Chrome(options=chrome_options)
+	chrome.get("https://www.google.com/")
+except Exception as e:
+	pass
+
+# Now This Code is Very Basic Here in This Code You can Parse Many Best Proxies And Use it in Your Browser
